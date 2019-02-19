@@ -29,7 +29,7 @@ end
 def select_series_title_with_most_human_characters
   "SELECT series.title FROM(
       SELECT series.title AS title, COUNT(characters.species_id) AS species_count
-      )
+      FROM series)
 end
 
 def select_character_names_and_number_of_books_they_are_in
